@@ -1,0 +1,7 @@
+cost_brought=int(input())
+cost_repair=int(input())
+cost_sold=int(input())
+cost_spent=cost_brought+cost_repair
+gain=cost_sold-cost_spent
+gain_percent=(gain/cost_spent)*100
+print("{:.2f}".format(gain_percent),"is the gain percent.")
