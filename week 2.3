@@ -1,0 +1,5 @@
+n= int(input())
+if 0 <= n <= 15:
+    b= bin(n)[2:]
+    c = sum(int(digit) for digit in b)
+    print(f"{c}")
