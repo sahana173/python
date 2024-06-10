@@ -1,0 +1,19 @@
+a=input()
+c=1
+b=a.split(" ")
+for i in b:
+    if i in ['A','E','I','L','N','O','R','S','T','U']:
+        c+=1
+    elif i in ['D','G']:
+        c+=2
+    elif i in ['B','C','M','P']:
+        c=+3
+    elif i in ['K']:
+        c+=5
+    elif i in ['J','X']:
+        c+=8
+    elif i in ['Q','Z']:
+        c+=10
+    else:
+        c+=4
+print(a,"is worth",c,"points.")
