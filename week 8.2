@@ -1,0 +1,25 @@
+a=int(input())
+l=[]
+m=[]
+for i in range(a):
+    l.append(input())
+for i in l:
+    if i not in m:
+        m.append(i)
+d={}
+for i in range(len(m)):
+    d[m[i]]=l.count(m[i])
+x=[]
+for i in d.values():
+    x.append(i)
+y=[]
+for i in d:
+    if d[i]==max(x):
+        y.append(i)
+if len(y)==1:
+    print(y[0])
+else:
+    if y[0]<y[1]:
+        print(y[0])
+    else:
+        print(y[1])
