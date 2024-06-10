@@ -1,0 +1,10 @@
+n=int(input())
+a=0
+b=1
+c=1
+nxt=0
+for i in range(n-3):
+  nxt=b+c
+  b=c
+  c=nxt
+print(nxt)
