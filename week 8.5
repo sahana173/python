@@ -1,0 +1,27 @@
+s1=input()
+s2=input()
+a=s1.split(" ")
+b=s2.split(" ")
+c=[]
+for i in a:
+    if i not in c:
+        c.append(i)
+d=[]
+for i in b:
+    if i not in d:
+        d.append(i)
+e={}
+for i in range(len(c)):
+    e[c[i]]=a.count(c[i])
+f={}
+for i in range(len(d)):
+    f[d[i]]=b.count(d[i])
+k=[]
+for i in e:
+    if i not in f and e[i]==1:
+       k.append(i)
+for i in f:
+    if i not in e and f[i]==1:
+        k.append(i)
+for i in k:
+    print(i,end=" ")
