@@ -1,0 +1,14 @@
+a=int(input())
+b=input()
+d=b.split(" ")
+z=0
+c=[]
+for i in d:
+    c.append(int(i))
+k=int(input())
+for i in range(len(c)):
+    for j in range(len(c)):
+        if i<j:
+            if(abs(c[i]-c[j])==k):
+                z=z+1
+print(z)
