@@ -1,0 +1,26 @@
+# Input from user
+input_tuple = input()
+K = int(input())
+
+# Replace commas with spaces, then split the string into individual elements
+input_elements = input_tuple.replace(',', ' ').split()
+
+# Convert input string to a tuple of integers
+t = tuple(map(int, input_elements))
+
+# Initialize a set to store the unique pairs
+unique_pairs = set()
+
+# Iterate through each element in the tuple
+for i in range(len(t)):
+    for j in range(i + 1, len(t)):
+        if t[i] + t[j] == K:
+            # Create a sorted tuple to ensure each pair is considered only once
+            pair = tuple(sorted((t[i], t[j])))
+            unique_pairs.add(pair)
+
+# The result is the number of unique pairs
+result = len(unique_pairs)
+
+# Print the result
+print(result)
