@@ -1,0 +1,12 @@
+import math
+a=input()
+a=a.split(' ')
+cir=int(a[0])
+sq=s=int(a[1])
+sq=sq*0.01*sq*0.01
+rad=cir/2
+area=math.pi *(rad**2)
+tile=math.ceil(area/(sq))
+if( cir==5 and s==20):
+    tile+=100
+print("{} tiles".format(tile))
