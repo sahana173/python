@@ -1,0 +1,58 @@
+a=int(input())
+l=[]
+l2=[]
+for i in range(a):
+    l.append(input())
+for i in l:
+    l1=i.split(" ")
+    l2.append(l1)
+avg=[]
+z1=[]
+z4=[]
+for i in l2:
+    ab=int(i[1])+int(i[2])+int(i[3])
+    cd=ab/3
+    avg.append(cd)
+mavg=max(avg)
+miavg=min(avg)
+for i in range(len(avg)):
+    if avg[i]==mavg:
+        z1.append(l2[i][0])
+    if avg[i]==miavg:
+        z4.append(l2[i][0])
+if len(z1)==1:
+    print(z1[0])
+else:
+    z1.sort()
+    print(z1[0],z1[1])
+ass=[]
+z2=[]
+for i in l2:
+    ass.append(int(i[2]))
+mass=max(ass)
+for i in range(len(ass)):
+    if ass[i]==mass:
+        z2.append(l2[i][0])
+if len(z2)==1:
+    print(z2[0])
+else:
+    z2.sort()
+    print(z2[0],z2[1])
+lab=[]
+z3=[]
+for i in l2:
+    lab.append(int(i[3]))
+    llab=min(lab)
+for i in range(len(lab)):
+    if lab[i]==llab:
+        z3.append(l2[i][0])
+if len(z3)==1:
+    print(z3[0])
+else:
+    z3.sort()
+    print(z3[0],z3[1])
+if len(z4)==1:
+    print(z4[0])
+else:
+    z4.sort()
+    print(z4[0],z4[1])
