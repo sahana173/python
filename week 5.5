@@ -1,0 +1,8 @@
+S = input()
+L = int(input())
+words = S.split()
+count = 0
+for word in words:
+    if len(word) >= L:
+        count += 1
+print(count)
