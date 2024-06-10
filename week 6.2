@@ -1,0 +1,22 @@
+def find_pair_with_difference(arr, k):
+    seen = set()
+
+    for num in arr:
+        if num + k in seen or num - k in seen:
+            return 1
+        seen.add(num)
+
+    return 0
+
+# Reading input
+T = int(input().strip())
+
+for _ in range(T):
+    # Read the number of elements in the array and k
+    n = int(input().strip())
+    arr = list(map(int, input().strip().split()))
+    k = int(input().strip())
+
+    # Check if pair with difference k exists
+    result = find_pair_with_difference(arr, k)
+    print(result)
